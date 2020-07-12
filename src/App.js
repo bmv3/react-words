@@ -2,13 +2,15 @@ import React from "react";
 import Table from "./Table/Table.js";
 import Header from "./Header.js";
 
-import getData from "./Data";
+import Data from "./Data";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    let words = getData();
+    this.data = new Data();
+
+    let words = this.data.wordsList;
 
     this.state = {
       words: words,
@@ -23,11 +25,18 @@ export default class App extends React.Component {
   }
 
   storeHandler(event) {
-    console.log("storeHandler is working");
+    this.data.setData(this.state.words);
+    let score = this.state.score;
+    score = this.state.words.length;
+    this.setState({ score });
   }
 
   resetHandler(event) {
-    console.log("resetHandler is working");
+    let words = this.data.defaultData();
+    let score = this.state.score;
+    score = words.length;
+    this.setState({ words });
+    this.setState({ score });
   }
 
   hideHandler(event) {
