@@ -1,4 +1,18 @@
-body {
+#score {
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 1em;
+}
+
+#start_count {
+  margin-right: 1em;
+}
+
+#store_button {
+  margin-right: 20px;
 }
 
 tr {
@@ -16,42 +30,6 @@ table {
 
 tbody .word-item_close {
   position: relative;
-}
-
-/* tbody .word-item_close:before {
-  content: "?";
-  position: absolute;
-  left: 0.55em;
-  top: 1em;
-  width: 20px;
-  height: 20px;
-  background: red;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5em;
-  margin: 0;
-  font-size: 18px;
-} */
-
-/* .word-item_close:hover:before {
-  background-color: green;
-  content: "X";
-} */
-
-#score {
-  position: sticky;
-  bottom: 0px;
-  width: 100%;
-  background: green;
-  color: white;
-  padding: 1em;
-}
-
-#start_count {
-  margin-right: 1em;
 }
 
 .bottom-panel {
