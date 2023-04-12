@@ -8,12 +8,10 @@ import './App.css';
 function App() {
   const [show, setShow] = useState([]);
 
-  
-
   return (
     <div className="App">
       <WordsHeader />
-      <WordsTable words={wordsList} />
+      <WordsTable words={wordsList} show={show} setShow={() => setShow} />
     </div>
   );
 }
