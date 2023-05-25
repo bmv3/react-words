@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import wordsSlice from '../feauters/words/wordsSlice';
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
     words: wordsSlice,
   },

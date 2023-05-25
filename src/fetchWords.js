@@ -1,11 +1,9 @@
-const fetchWords = async (url) => {
+export const fetchWords = async (url) => {
   try {
     const response = await fetch(url);
-    const data = await response.json();
-    return data;
+    console.log(response);
+    return await response.json();
   } catch (error) {
     console.log('Error getting data: ', error);
   }
 };
-
-export default fetchWords;

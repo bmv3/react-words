@@ -14,5 +14,5 @@ export const wordsSlice = createSlice({
   },
 });
 
-export const { wordsState } = wordsSlice.actions;
+export const { setWords } = wordsSlice.actions;
 export default wordsSlice.reducer;

@@ -12,8 +12,9 @@ function App() {
   const [show, setShow] = useState([]);
 
   useEffect(() => {
-    const words = fetchWords('data.js');
-    dispatch(setWords(words));
+    const words = fetchWords('data.json');
+    // console.log(words);
+    // dispatch(setWords(words));
   }, []);
 
   return (
